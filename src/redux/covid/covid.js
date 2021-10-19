@@ -5,7 +5,10 @@ const ADD_SA_DATA = 'covid-data-display/countries/ADD_SA_DATA';
 const API_SUCCESS = 'covid-data-display/countries/API_SUCCESS';
 const API_FAILURE = 'covid-data-display/countries/API_FAILURE';
 
-const initialSAData = [];
+const initialSAData = {
+  countries: [],
+  loaded: false,
+};
 
 export const fetchSAData = () => (dispatch) => {
   dispatch({ type: FETCH_SA_DATA });
@@ -23,7 +26,10 @@ export const fetchSAData = () => (dispatch) => {
 const covidSAReducer = (state = initialSAData, action) => {
   switch (action.type) {
     case ADD_SA_DATA:
-      return [...state, ...action.countries];
+      return {
+        countries: [...state.countries, ...action.countries],
+        loaded: true,
+      };
     default:
       return state;
   }
