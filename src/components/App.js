@@ -1,12 +1,10 @@
 import './App.css';
 import React, { useEffect } from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from 'react-router-dom';
 import { useDispatch } from 'react-redux';
+import { Switch, Route } from 'react-router-dom';
 import { fetchSAData } from '../redux/covid/covid';
+import Homepage from '../pages/Homepage';
+import Details from '../pages/Details';
 
 function App() {
   const dispatch = useDispatch();
@@ -15,7 +13,14 @@ function App() {
   }, []);
 
   return (
-    <h1>Insert your capstone project here</h1>
+    <Switch>
+      <Route path="/" exact>
+        <Homepage />
+      </Route>
+      <Route path="/details/:slug" exact>
+        <Details />
+      </Route>
+    </Switch>
   );
 }
 
