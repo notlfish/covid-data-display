@@ -14,9 +14,12 @@ const mapSrc = (iso) => {
   return `${MAPS_API_BASE_URL}/${iso}/${options}`;
 };
 
-const today = () => {
-  const date = new Date();
-  return date.toISOString().split('T')[0];
+const getYesterdayDate = () => {
+  const today = new Date();
+  const yesterday = new Date(today);
+  yesterday.setDate(yesterday.getDate() - 1);
+
+  return yesterday.toISOString().split('T')[0];
 };
 
 export const fetchDayData = async (day) => {
@@ -32,4 +35,4 @@ export const fetchDayData = async (day) => {
   });
 };
 
-export default () => fetchDayData(today());
+export default () => fetchDayData(getYesterdayDate());

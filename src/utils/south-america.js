@@ -33,7 +33,7 @@ export default [
   },
   {
     name: 'Suriname',
-    iso: 'sr',
+    iso: 'gy',
   },
   {
     name: 'Uruguay',
