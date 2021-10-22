@@ -84,7 +84,9 @@ Array [
       </div>
     </nav>
   </header>,
-  <main>
+  <main
+    className="bg-pink-odd"
+  >
     <div
       className="mainContainer bg-main-pink"
     >
@@ -106,6 +108,9 @@ Array [
           </h1>
           <p>
             Active cases:
+             
+             
+             
             531293
           </p>
         </div>

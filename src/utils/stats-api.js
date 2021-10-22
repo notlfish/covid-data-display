@@ -4,17 +4,17 @@ const COVID_API_BASE_URL = 'https://api.covid19tracking.narrativa.com/api';
 const FLAGS_API_BASE_URL = 'https://www.countryflags.io';
 const MAPS_API_BASE_URL = 'https://raw.githubusercontent.com/djaiss/mapsicon/master/samerica';
 
-const flagSrc = (iso) => {
+export const flagSrc = (iso) => {
   const options = 'flat/64.png';
   return `${FLAGS_API_BASE_URL}/${iso}/${options}`;
 };
 
-const mapSrc = (iso) => {
+export const mapSrc = (iso) => {
   const options = '64.png';
   return `${MAPS_API_BASE_URL}/${iso}/${options}`;
 };
 
-const getYesterdayDate = () => {
+export const getYesterdayDate = () => {
   const today = new Date();
   const yesterday = new Date(today);
   yesterday.setDate(yesterday.getDate() - 1);
