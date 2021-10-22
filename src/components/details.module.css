@@ -1,0 +1,43 @@
+.mainContainer {
+  min-height: 100vh;
+}
+
+.flag {
+  opacity: 0.6;
+  margin: auto;
+}
+
+.countryName {
+  font-size: 20px;
+}
+
+.infoHeader {
+  min-height: 130px;
+  height: 20vh;
+  padding: 0 30px;
+}
+
+.sectionTitle {
+  padding: 3px 0 5px 20px;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.stats {
+  list-style: none;
+  font-size: 16px;
+}
+
+.stats li {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 25px;
+}
+
+.stats li:nth-child(odd) {
+  background-color: #dc4680;
+}
+
+.stats li:nth-child(even) {
+  background-color: #cc4176;
+}
