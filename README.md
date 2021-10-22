@@ -3,6 +3,7 @@
 Mobile web app to display COVID data from South American countries.
 
 ### [Live version](https://notlfish-covid-data-display.netlify.app/)
+### [Project presentation video](https://www.loom.com/share/c9ab4a49258249fcba434c47ab046b1e)
 
 ![Home Page screenshot](assets/homepage.png)
 ![Details Page screenshot](assets/details-page.png)
