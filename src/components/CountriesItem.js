@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
+import styles from './countriesitem.module.css';
 
 const CountriesItem = ({
   id, name, todayOpenCases, map,
@@ -9,13 +10,17 @@ const CountriesItem = ({
       to={`/details/${id}`}
       exact
     >
-      <img src={map} alt={`${name} map`} />
-      <h3>{name}</h3>
-      <p>
-        {todayOpenCases}
-        {' '}
-        open cases
-      </p>
+      <div className={styles.container}>
+        <img className={styles.shape} src={map} alt={`${name} map`} />
+        <div className="text-right">
+          <h3 className="uppercase">{name}</h3>
+          <p>
+            {todayOpenCases}
+            {' '}
+            open cases
+          </p>
+        </div>
+      </div>
     </NavLink>
   </li>
 );
