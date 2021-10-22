@@ -1,5 +1,6 @@
 import { shallowEqual, useSelector } from 'react-redux';
 import { Redirect, useRouteMatch } from 'react-router-dom';
+import styles from './details.module.css';
 
 const selectCountry = (id, { countries }) => {
   for (let i = 0; i < countries.length; i += 1) {
@@ -15,30 +16,33 @@ const CountryDetails = () => {
 
   const {
     name,
-    flag,
-    today_confirmed: historicCases,
-    today_deaths: historicDeaths,
-    today_recovered: historicRecovered,
-    today_new_confirmed: newCases,
-    today_open_cases: activeCases,
-    today_new_deaths: newDeaths,
-    today_new_recovered: newRecovered,
+    map,
+    source,
+    historicCases,
+    historicDeaths,
+    historicRecovered,
+    newCases,
+    activeCases,
+    newDeaths,
+    newRecovered,
   } = useSelector((state) => selectCountry(countryId, state.covidSA),
     shallowEqual);
 
   return (
-    <div>
-      <div>
-        <img src={flag} alt={`${name} flag`} />
-        <h1>{name}</h1>
+    <div className={`${styles.mainContainer} bg-main-pink`}>
+      <div className={`d-grid-two-cols align-v-center ${styles.infoHeader}`}>
+        <img className={`${styles.flag} d-block`} src={map} alt={`${name} shape`} />
+        <div className="text-left">
+          <h1 className={`uppercase ${styles.countryName}`}>{name}</h1>
+          <p>
+            Active cases:
+            {activeCases}
+          </p>
+        </div>
       </div>
       <div>
-        <h2>Today&apos;s data</h2>
-        <ul>
-          <li>
-            <p>Active cases</p>
-            <p>{activeCases}</p>
-          </li>
+        <h2 className={`uppercase bg-pink-odd ${styles.sectionTitle}`}>Today&apos;s data</h2>
+        <ul className={styles.stats}>
           <li>
             <p>New confirmed cases</p>
             <p>{newCases}</p>
@@ -54,8 +58,8 @@ const CountryDetails = () => {
         </ul>
       </div>
       <div>
-        <h2>Historic data</h2>
-        <ul>
+        <h2 className={`uppercase bg-pink-odd ${styles.sectionTitle}`}>Historic data</h2>
+        <ul className={styles.stats}>
           <li>
             <p>Total cases</p>
             <p>{historicCases}</p>
@@ -68,6 +72,12 @@ const CountryDetails = () => {
             <p>Total deaths</p>
             <p>{historicDeaths}</p>
           </li>
+        </ul>
+      </div>
+      <div>
+        <h2 className={`uppercase bg-pink-odd ${styles.sectionTitle}`}>Source</h2>
+        <ul className={styles.stats}>
+          <li><p>{source}</p></li>
         </ul>
       </div>
     </div>
