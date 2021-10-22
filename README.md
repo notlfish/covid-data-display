@@ -2,6 +2,12 @@
 
 Mobile web app to display COVID data from South American countries.
 
+### [Live version](https://notlfish-covid-data-display.netlify.app/)
+### [Project presentation video](https://www.loom.com/share/c9ab4a49258249fcba434c47ab046b1e)
+
+![Home Page screenshot](assets/homepage.png)
+![Details Page screenshot](assets/details-page.png)
+
 ## Built With
 
 - HTML
@@ -40,6 +46,13 @@ doesn't, you can just access `localhost:3000` to see the project.
 - GitHub: [@notlfish](https://github.com/notlfish)
 - Twitter: [@LucasFerrariSo1](https://twitter.com/LucasFerrariSo1)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/lucas-mauricio-ferrari-soto-472a3515a/)
+
+## Acknowledgements
+The design of this page follows the desing by [Nelson Sakwa](https://www.behance.net/sakwadesignstudio) that can be found in [Benhance](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs))
+
+The country shapes are taken from [Regis Freyd's](https://github.com/djaiss) [mapsicon repository](https://github.com/djaiss/mapsicon)
+
+Big thanks to them for making their available to use for the minimal price of acknowledgement!
 
 ## 🤝 Contributing
 

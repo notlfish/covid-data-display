@@ -1,0 +1,15 @@
+.countriesList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  list-style: none;
+}
+
+.countriesList li:nth-of-type(4n+1),
+.countriesList li:nth-of-type(4n+4) {
+  background-color: #dc4680;
+}
+
+.countriesList li:nth-of-type(4n+2),
+.countriesList li:nth-of-type(4n+3) {
+  background-color: #cc4176;
+}
