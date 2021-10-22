@@ -13,7 +13,7 @@ const Homepage = () => {
   return (
     <>
       <header className="bg-pink-odd"><ToolBar /></header>
-      <main>
+      <main className="bg-pink-odd">
         <SearchBar handleChange={handleKeywordChange} />
         <CountriesTable keyword={keyword} />
       </main>
