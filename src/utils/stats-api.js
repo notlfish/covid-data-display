@@ -28,7 +28,16 @@ export const fetchDayData = async (day) => {
   return saCountries.map(({ name, iso }) => {
     const covidData = covidResponse.dates[day].countries[name];
     return {
-      ...covidData,
+      id: covidData.id,
+      name: covidData.name,
+      source: covidData.source,
+      historicCases: covidData.today_confirmed,
+      historicDeaths: covidData.today_deaths,
+      historicRecovered: covidData.today_recovered,
+      newCases: covidData.today_new_confirmed,
+      activeCases: covidData.today_open_cases,
+      newDeaths: covidData.today_new_deaths,
+      newRecovered: covidData.today_new_recovered,
       map: mapSrc(iso),
       flag: flagSrc(iso),
     };
