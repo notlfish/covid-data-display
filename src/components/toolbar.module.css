@@ -1,0 +1,19 @@
+.toolbar {
+  font-size: 18px;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navTitle {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 18px;
+  padding-bottom: 5px;
+}
+
+.rightIcons {
+  font-size: 20px;
+  line-height: 20px;
+}
