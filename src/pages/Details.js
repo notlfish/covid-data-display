@@ -4,7 +4,7 @@ import ToolBar from '../components/ToolBar';
 const Details = () => (
   <>
     <header className="bg-pink-odd"><ToolBar /></header>
-    <main>
+    <main className="bg-pink-odd">
       <CountryDetails />
     </main>
   </>
