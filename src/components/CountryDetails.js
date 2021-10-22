@@ -36,6 +36,9 @@ const CountryDetails = () => {
           <h1 className={`uppercase ${styles.countryName}`}>{name}</h1>
           <p>
             Active cases:
+            {' '}
+            {' '}
+            {' '}
             {activeCases}
           </p>
         </div>

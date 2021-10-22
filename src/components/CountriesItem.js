@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
+import { BsArrowRightCircle } from 'react-icons/bs';
 import styles from './countriesitem.module.css';
 
 const CountriesItem = ({
@@ -11,6 +12,7 @@ const CountriesItem = ({
       exact
     >
       <div className={styles.container}>
+        <BsArrowRightCircle className="float-right" />
         <img className={styles.shape} src={map} alt={`${name} map`} />
         <div className="text-right">
           <h3 className="uppercase">{name}</h3>
