@@ -41,6 +41,13 @@ doesn't, you can just access `localhost:3000` to see the project.
 - Twitter: [@LucasFerrariSo1](https://twitter.com/LucasFerrariSo1)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/lucas-mauricio-ferrari-soto-472a3515a/)
 
+## Acknowledgements
+The design of this page follows the desing by [Nelson Sakwa](https://www.behance.net/sakwadesignstudio) that can be found in [Benhance](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs))
+
+The country shapes are taken from [Regis Freyd's](https://github.com/djaiss) [mapsicon repository](https://github.com/djaiss/mapsicon)
+
+Big thanks to them for making their available to use for the minimal price of acknowledgement!
+
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!
